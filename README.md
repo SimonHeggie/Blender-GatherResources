@@ -16,7 +16,7 @@ For now, grab the PY file and copy and paste it into your text editor in Blender
 For now, just copy the contents of the PY file into your script editor and press play.
 
 
-In the future the plane is to provide an addon which creates this menu item:
+In the future the plan is to provide an addon which creates this menu item:
 
 File > External Data > Gather Resources: 
 
