@@ -3,7 +3,7 @@ Collect/Assemble/Gather all resources to the texture child directory. AKA: 'GET 
 
 Early testing has begun.
 
-WARNING: AS IN, NO TESTING HAS BEEN DONE YET. I REPEAT. NO TESTING HAS BEEN DONE!
+I have tested this only using a file with several similarly named EXR UDIMS to practice and extreme case example. 
 
 TEST AT YOUR OWN PERIL.
 
@@ -12,6 +12,11 @@ TEST AT YOUR OWN PERIL.
 For now, grab the PY file and copy and paste it into your text editor in Blender, save it in the blend file. Run the script to activate it.
 
 ## Usage:
+
+For now, just copy the contents of the PY file into your script editor and press play.
+
+
+In the future the plane is to provide an addon which creates this menu item:
 
 File > External Data > Gather Resources: 
 
