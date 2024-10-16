@@ -31,35 +31,41 @@ def gather_resources():
 
     tasks = []
 
-    # Use multi-threading for faster processing
-    with ThreadPoolExecutor() as executor:
-        # Scan all data blocks in the active scene
-        for datablock in bpy.data.objects:
-            # Check for modifiers with external references (e.g., Alembic caches)
-            if datablock.modifiers:
-                for mod in datablock.modifiers:
-                    if mod.type == 'MESH_SEQUENCE_CACHE' and mod.cache_file:
-                        src = Path(bpy.path.abspath(mod.cache_file.filepath))
-                        dest = get_destination_folder(src, textures_dir) / src.name
-                        tasks.append(executor.submit(copy_file, src, dest))
+    def add_task_for_path(file_path):
+        """Add a copy task for a given file path."""
+        if not file_path:  # Ensure the path is valid
+            return
+        src = Path(bpy.path.abspath(file_path))
+        if src.exists():  # Ensure the file exists
+            dest = get_destination_folder(src, textures_dir) / src.name
+            tasks.append(executor.submit(copy_file, src, dest))
+        else:
+            print(f"File not found: {src}")
 
-        # Handle video, audio, and image strips in the VSE
+    with ThreadPoolExecutor() as executor:
+        # Process all images used in shaders and textures
+        for image in bpy.data.images:
+            add_task_for_path(image.filepath)
+
+        # Process all media files in VSE
         for scene in bpy.data.scenes:
             if scene.sequence_editor:
                 for strip in scene.sequence_editor.sequences_all:
-                    if strip.type in {'MOVIE', 'IMAGE', 'SOUND'}:
-                        src = Path(bpy.path.abspath(strip.filepath))
-                        dest = get_destination_folder(src, textures_dir) / src.name
-                        tasks.append(executor.submit(copy_file, src, dest))
+                    add_task_for_path(strip.filepath)
 
-    # Process results and report collected files
+        # Process all cache files in object modifiers
+        for obj in bpy.data.objects:
+            for mod in obj.modifiers:
+                if mod.type == 'MESH_SEQUENCE_CACHE' and mod.cache_file:
+                    add_task_for_path(mod.cache_file.filepath)
+
+    # Process results and print summary
     collected_files = {"TOTAL": 0}
     for future in as_completed(tasks):
         filename, success = future.result()
         if success:
             collected_files["TOTAL"] += 1
 
-    # Print summary of collected resources
     print(f"Gathering Complete: {collected_files['TOTAL']} files collected.")
 
 # Call the function
