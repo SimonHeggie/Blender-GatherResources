@@ -3,24 +3,20 @@ Collect/Assemble/Gather all resources to the texture child directory. AKA: 'GET 
 
 Early testing has begun.
 
-I have tested this only using a file with several similarly named EXR UDIMS to practice and extreme case example. 
+I have tested a couple of scenarios, but TEST AT YOUR OWN PERIL.... Be sure to test it on something that you don't mind destroying. 
 
-TEST AT YOUR OWN PERIL.
 
 ## Installation:
 
-For now, grab the PY file and copy and paste it into your text editor in Blender, save it in the blend file. Run the script to activate it.
+Download from here: https://github.com/SimonHeggie/Blender-GatherResources/archive/refs/heads/main.zip (DO NOT UNZIP)
+
+In blender: Edit/Preferences/Add-ons... Top right arrow, 'Install from Disk'. Select the Gather Resources zip file, then tick it to activate.
 
 ## Usage:
 
-For now, just copy the contents of the PY file into your script editor and press play.
-
-
-In the future the plan is to provide an addon which creates this menu item:
-
 File > External Data > Gather Resources: 
 
-This should in theory take all resources used within your project and relocate them to your child texture directory.
+This will take all resources used within your project and relocate them to your child texture directory.
 
 ## BUGS:
 
