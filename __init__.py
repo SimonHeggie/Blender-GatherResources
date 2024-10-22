@@ -32,7 +32,7 @@ bl_info = {
     "category": "File",
     "version": (0, 3, 1, "alpha"),
     "author": "Simon Heggie",
-    "description": "Gathers all resources used in the project and copies them to a local textures folder.",
+    "description": "Gathers all resources used in the project to a local textures folder.",
     "location": "File > External Data",
     "warning": "Pre-alpha testing",
     "wiki_url": "https://github.com/SimonHeggie/Blender-GatherResources/blob/main/README.md",
