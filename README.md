@@ -43,11 +43,11 @@ This will take all resources used within your project and relocate them to your 
 
 ### Final plan:
 
--Polish the Addon: Ensure code quality, follow Blender's coding guidelines, and fully document the addon.
--Submit to Blender Developers: Create a task on Blender Developer Site and submit your addon for review.
--Engage with Developer Community: Discuss the proposal on the Blender Developer forums or IRC to gather feedback.
--Address Feedback: Make necessary improvements based on code reviews and feedback from Blender's core development team.
--Wait for Testing and Integration: The addon will go through further testing, and if accepted, it will be included in a future Blender release.
+- Polish the Addon: Ensure code quality, follow Blender's coding guidelines, and fully document the addon.
+- Submit to Blender Developers: Create a task on Blender Developer Site and submit your addon for review.
+- Engage with Developer Community: Discuss the proposal on the Blender Developer forums or IRC to gather feedback.
+- Address Feedback: Make necessary improvements based on code reviews and feedback from Blender's core development team.
+- Wait for Testing and Integration: The addon will go through further testing, and if accepted, it will be included in a future Blender release.
 
 ## Reporting BUGS:
 
