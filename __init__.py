@@ -18,7 +18,7 @@
 # https://github.com/SimonHeggie/Blender-GatherResources/issues
 #
 # If this program operates interactively, it should output the following:
-# 
+#
 # Gather Resources  Copyright (C) 2024  Simon Heggie
 # This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
 # This is free software, and you are welcome to redistribute it
@@ -30,7 +30,7 @@ bl_info = {
     "name": "Gather Resources",
     "blender": (4, 2, 0),
     "category": "File",
-    "version": (0, 3, 0, "alpha"),
+    "version": (0, 3, 1, "alpha"),
     "author": "Simon Heggie",
     "description": "Gathers all resources used in the project and copies them to a local textures folder.",
     "location": "File > External Data",
@@ -138,8 +138,7 @@ def menu_func(self, context):
 
 def register():
     bpy.utils.register_class(GatherResourcesOperator)
-    bpy.types.TOPBAR_MT_file_external_data.append(menu_func)
-
+    bpy.types.TOPBAR_MT_file_external_data.prepend(menu_func)  # Use prepend to insert at the top
 
 def unregister():
     bpy.utils.unregister_class(GatherResourcesOperator)
