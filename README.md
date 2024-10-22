@@ -21,7 +21,31 @@ File > External Data > Gather Resources:
 
 This will take all resources used within your project and relocate them to your child texture directory.
 
-## BUGS:
+## (Speculative) Road Map:
+
+### Alpha:
+
+- If a duplicate is found somehow; either rename the file, or place in number clone folder. Should be dedectable via comparing file sizes.
+- If a duplicate is found and it has the exact same file size, technically that should be re-used instead of causing uneccesary clone data bloat.
+- Full cross platform support (Linux, Windows, Mac)
+
+### Production ready Stable build:
+
+- All bugs founds and crushed
+
+### Future ideas:
+
+- Menu option to 'Automatically Gather Resources'
+- Either combine the task of, or create a seperate option for capturing all PROXY and CACHE data, which should be gathered but probably not into the 'textures' directory, seeing as it's something that it not as essential as the core resources needed to re-bake and re-render.
+- 'Distribute Resources' Sort of like unpack; does the opposite of Gather. It requires storing the original locations of files prior to being gathered. Usecase is updating modified library and stock content for example.
+- Support for resource data which is linked and needs to be gathered and vise-versa
+- (Very unsure of where this is essential or not...) Collapse the entire 'PACK' menu into one sub-menu and do the same for the gathering commands to neaten the entire menu.
+
+### Final form:
+
+-Fork created a
+
+## Reporting BUGS:
 
 This is going to be full of bugs, so any testing is apreciated.
 
