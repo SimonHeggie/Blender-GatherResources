@@ -1,3 +1,31 @@
+# Gather Resources - Gathers all resources used in the project and copies them to a local textures folder.
+# Copyright (C) 2024  Simon Heggie
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+# You can provide feedback, report bugs, or submit suggestions via the issue section:
+# https://github.com/SimonHeggie/Blender-GatherResources/issues
+#
+# If this program operates interactively, it should output the following:
+# 
+# Gather Resources  Copyright (C) 2024  Simon Heggie
+# This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+# This is free software, and you are welcome to redistribute it
+# under certain conditions; type `show c' for details.
+#
+# The commands `show w` and `show c` should display relevant parts of the GNU GPL.
+
 bl_info = {
     "name": "Gather Resources",
     "blender": (4, 2, 0),
@@ -8,9 +36,11 @@ bl_info = {
     "location": "File > External Data",
     "warning": "Pre-alpha testing",
     "wiki_url": "https://github.com/SimonHeggie/Blender-GatherResources/blob/main/README.md",
-    "tracker_url": "",
+    "tracker_url": "https://github.com/SimonHeggie/Blender-GatherResources/issues",
     "license": "GPL",
 }
+
+# (rest of the code follows here)
 
 import bpy
 import shutil
