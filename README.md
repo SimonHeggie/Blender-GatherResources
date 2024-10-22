@@ -44,6 +44,7 @@ This will take all resources used within your project and relocate them to your 
 - 'Distribute Resources' Sort of like unpack; does the opposite of Gather. It requires storing the original locations of files prior to being gathered. Usecase is updating modified library and stock content for example.
 - Support for resource data which is linked and needs to be gathered and vise-versa
 - (Very unsure of where this is essential or not...) Collapse the entire 'PACK' menu into one sub-menu and do the same for the gathering commands to neaten the entire menu.
+- CLEAN resources: FIRST; warns the users to double check that any other blend files are not share data, and if they are to append all into one blend file before hand. (can remove warning) THEN finds every file NOT being read by the active blend file and removes it. This is going to be SO helpful for optimizing for easy deployment and archiving.
 
 ### Final plan:
 
