@@ -26,7 +26,11 @@ This will take all resources used within your project and relocate them to your 
 ### Alpha:
 
 - If a duplicate is found somehow; either rename the file, or place in number clone folder. Should be dedectable via comparing file sizes.
-- If a duplicate is found and it has the exact same file size, technically that should be re-used instead of causing uneccesary clone data bloat.
+- There is currently a bug where sub-folders in the texture folder are moved into the root of textures which may result in unwanted merged data.
+- If a duplicate is found and it has the exact same file size, technically that should be re-used instead of causing uneccesary clone data bloat. (This means that asset versioning is up to the users to manage)
+
+### Beta
+
 - Full cross platform support (Linux, Windows, Mac)
 
 ### Production ready Stable build:
