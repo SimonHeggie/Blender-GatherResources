@@ -1,5 +1,8 @@
 # Blender-GatherResources
+
 Collect/Assemble/Gather all resources to the texture child directory. AKA: 'GET YOUR SHIT TOGETHER.'
+
+<img src="GatherResources.png">
 
 Early testing has begun.
 
@@ -49,6 +52,8 @@ Expected Behavior: (E.g., "Files should be copied to the 'textures' folder, and 
 Actual Behavior: (E.g., "Files remained in their original location, or the paths were not updated.")
 
 #### 4. System Information
+
+
 Operating System: (E.g., Windows 11, Ubuntu 22.04, macOS 13)
 CPU: (E.g., Intel Core i9-13900HX)
 GPU: (E.g., NVIDIA RTX 4070)
@@ -59,7 +64,8 @@ Were all file types handled correctly?
 (E.g., "The script copied image files, but skipped .abc files.")
 Relevant Formats in Use: (Check all that apply)
  Video (.mp4, .mkv, etc.)
- Image (.png, .jpg, etc.)
+ Image (.png, .jpg, etc
+.)
  Audio (.wav, .mp3, etc.)
  Alembic (.abc)
  3D Models (.fbx, .obj, etc.)
